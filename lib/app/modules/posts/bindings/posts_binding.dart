@@ -1,3 +1,4 @@
+import 'package:delivery/app/modules/posts/providers/post_provider.dart';
 import 'package:get/get.dart';
 
 import '../controllers/posts_controller.dart';
@@ -7,6 +8,10 @@ class PostsBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<PostsController>(
       () => PostsController(),
+    );
+
+    Get.lazyPut<PostProvider>(
+      () => PostProvider(),
     );
   }
 }
